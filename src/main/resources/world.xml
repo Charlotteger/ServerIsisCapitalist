@@ -21,7 +21,7 @@ and open the template in the editor.
         <product>
             <id>1</id>
             <name>fer</name>
-            <logo>images/fer</logo>
+            <logo>fer.png</logo>
             <cout>10</cout>
             <croissance>1.01</croissance>
             <revenu>15</revenu>
@@ -61,8 +61,49 @@ and open the template in the editor.
         </product>
         <product>
             <id>2</id>
-            <name>Couteau à fromage</name>
-            <logo>images/</logo>
+            <name>fourchette</name>
+            <logo>fourchette.png</logo>
+            <cout>15</cout>
+            <croissance>1.07</croissance>
+            <revenu>25</revenu>
+            <vitesse>700</vitesse>
+            <quantite>0</quantite>
+            <timeleft>0</timeleft>
+            <managerUnlocked>false</managerUnlocked>
+            <palliers>
+                <pallier>
+                    <name>Petit remontant</name>
+                    <logo>images/</logo>
+                    <seuil>20</seuil>
+                    <idcible>1</idcible>
+                    <ratio>1.5</ratio>
+                    <typeratio>VITESSE</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>Nouveau filon</name>
+                    <logo>images/</logo>
+                    <seuil>40</seuil>
+                    <idcible>1</idcible>
+                    <ratio>1.2</ratio>
+                    <typeratio>GAIN</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>Une bonne chope</name>
+                    <logo>images/</logo>
+                    <seuil>80</seuil>
+                    <idcible>1</idcible>
+                    <ratio>1.2</ratio>
+                    <typeratio>VITESSE</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier> 
+            </palliers>
+        </product>
+        <product>
+            <id>3</id>
+            <name>couteau à fromage</name>
+            <logo>couteau.png</logo>
             <cout>15</cout>
             <croissance>1.07</croissance>
             <revenu>25</revenu>
@@ -101,6 +142,129 @@ and open the template in the editor.
             </palliers>
         </product>
     </products>
+    <product>
+            <id>4</id>
+            <name>tranchoir</name>
+            <logo>tranchoir.png</logo>
+            <cout>15</cout>
+            <croissance>1.07</croissance>
+            <revenu>25</revenu>
+            <vitesse>700</vitesse>
+            <quantite>0</quantite>
+            <timeleft>0</timeleft>
+            <managerUnlocked>false</managerUnlocked>
+            <palliers>
+                <pallier>
+                    <name>Petit remontant</name>
+                    <logo>images/</logo>
+                    <seuil>20</seuil>
+                    <idcible>1</idcible>
+                    <ratio>1.5</ratio>
+                    <typeratio>VITESSE</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>Nouveau filon</name>
+                    <logo>images/</logo>
+                    <seuil>40</seuil>
+                    <idcible>1</idcible>
+                    <ratio>1.2</ratio>
+                    <typeratio>GAIN</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>Une bonne chope</name>
+                    <logo>images/</logo>
+                    <seuil>80</seuil>
+                    <idcible>1</idcible>
+                    <ratio>1.2</ratio>
+                    <typeratio>VITESSE</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier> 
+            </palliers>
+        </product>
+        <product>
+            <id>5</id>
+            <name>épee</name>
+            <logo>epee.png</logo>
+            <cout>15</cout>
+            <croissance>1.07</croissance>
+            <revenu>25</revenu>
+            <vitesse>700</vitesse>
+            <quantite>0</quantite>
+            <timeleft>0</timeleft>
+            <managerUnlocked>false</managerUnlocked>
+            <palliers>
+                <pallier>
+                    <name>Petit remontant</name>
+                    <logo>images/</logo>
+                    <seuil>20</seuil>
+                    <idcible>1</idcible>
+                    <ratio>1.5</ratio>
+                    <typeratio>VITESSE</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>Nouveau filon</name>
+                    <logo>images/</logo>
+                    <seuil>40</seuil>
+                    <idcible>1</idcible>
+                    <ratio>1.2</ratio>
+                    <typeratio>GAIN</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>Une bonne chope</name>
+                    <logo>images/</logo>
+                    <seuil>80</seuil>
+                    <idcible>1</idcible>
+                    <ratio>1.2</ratio>
+                    <typeratio>VITESSE</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier> 
+            </palliers>
+        </product>
+        <product>
+            <id>6</id>
+            <name>hache</name>
+            <logo>hache.png</logo>
+            <cout>15</cout>
+            <croissance>1.07</croissance>
+            <revenu>25</revenu>
+            <vitesse>700</vitesse>
+            <quantite>0</quantite>
+            <timeleft>0</timeleft>
+            <managerUnlocked>false</managerUnlocked>
+            <palliers>
+                <pallier>
+                    <name>Petit remontant</name>
+                    <logo>images/</logo>
+                    <seuil>20</seuil>
+                    <idcible>1</idcible>
+                    <ratio>1.5</ratio>
+                    <typeratio>VITESSE</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>Nouveau filon</name>
+                    <logo>images/</logo>
+                    <seuil>40</seuil>
+                    <idcible>1</idcible>
+                    <ratio>1.2</ratio>
+                    <typeratio>GAIN</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>Une bonne chope</name>
+                    <logo>images/</logo>
+                    <seuil>80</seuil>
+                    <idcible>1</idcible>
+                    <ratio>1.2</ratio>
+                    <typeratio>VITESSE</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier> 
+            </palliers>
+        </product>
     <allunlocks>
         <pallier>
             <name>Petit remontant</name>
