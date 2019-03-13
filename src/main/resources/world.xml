@@ -291,6 +291,60 @@ and open the template in the editor.
     <angelupgrades>
     </angelupgrades>
     <managers>
+        <pallier>
+            <idcible>1</idcible>
+            <logo>manager1</logo>
+            <name>maître des fourchettes</name>
+            <ratio>2</ratio>
+            <seuil>1000</seuil>
+            <typeratio>VITESSE</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <idcible>2</idcible>
+            <logo>manager/dresseur_chien.png</logo>
+            <name>Dresseur de chien</name>
+            <ratio>2</ratio>
+            <seuil>15000</seuil>
+            <typeratio>VITESSE</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <idcible>3</idcible>
+            <logo>manager/postier.png</logo>
+            <name>Postier</name>
+            <ratio>2</ratio>
+            <seuil>500000</seuil>
+            <typeratio>VITESSE</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <idcible>4</idcible>
+            <logo>manager/garagiste.png</logo>
+            <name>Garagiste</name>
+            <ratio>2</ratio>
+            <seuil>1200000</seuil>
+            <typeratio>VITESSE</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <idcible>5</idcible>
+            <logo>manager/mcdo.png</logo>
+            <name>Employe McDO</name>
+            <ratio>2</ratio>
+            <seuil>111111111</seuil>
+            <typeratio>VITESSE</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <idcible>6</idcible>
+            <logo>manager/zeus.png</logo>
+            <name>Zeus</name>
+            <ratio>2</ratio>
+            <seuil>555555555</seuil>
+            <typeratio>VITESSE</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
     </managers>
 
 </world>

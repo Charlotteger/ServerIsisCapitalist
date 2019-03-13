@@ -11,9 +11,14 @@ package com.isis.adventureISIServer.demo;
  * @author MrsFrozen
  */
 
+import com.google.gson.Gson;
 import com.isis.adventureISIServer.demo.Services;
+import generated.PallierType;
+import generated.ProductType;
 import javax.servlet.http.HttpServletRequest;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
@@ -43,7 +48,23 @@ public class Webservice {
         @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
         public Response getXML(@Context HttpServletRequest request) throws JAXBException{
             String username = request.getHeader("X-user");
-            return Response.ok(services.readWorldFromXml(username)).build();//faut modifier cette ligne
+            return Response.ok(services.readWorldFromXml(username)).build();
+        }
+        
+        @PUT
+        @Path("product")
+        @Consumes(MediaType.APPLICATION_JSON)
+        public void product (@Context HttpServletRequest request, String content) throws JAXBException { 
+            String username = request.getHeader("X-user");
+            ProductType product = new Gson().fromJson(content, ProductType.class);
+        }
+
+        @PUT
+        @Path("manager")
+        @Consumes(MediaType.APPLICATION_JSON)
+        public void manager (@Context HttpServletRequest request, String content) throws JAXBException { 
+            String username = request.getHeader("X-user");
+            PallierType pallier = new Gson().fromJson(content, PallierType.class);
         }
     
     
