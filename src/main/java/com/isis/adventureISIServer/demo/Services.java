@@ -20,20 +20,19 @@ import javax.xml.bind.Unmarshaller;
  * @author MrsFrozen
  */
 public class Services {
-    
-    public World readWorldFromXml() throws JAXBException {
+        
+    public World readWorldFromXml(String username) throws JAXBException {
         JAXBContext cont = JAXBContext.newInstance(World.class);
         Unmarshaller u = cont.createUnmarshaller();
         World world;
         try {
-            world = (World) u.unmarshal(new File("world.xml"));
-        }
-        catch (JAXBException e) {
+            world = (World) u.unmarshal(new File(username + "_world.xml"));
+        } catch (JAXBException e) {
             InputStream input = getClass().getClassLoader().getResourceAsStream("world.xml");
             world = (World) u.unmarshal(input);
             System.out.println(e.getMessage());
         }
-        return world;
+        return world; //score à ajouter ?
     }
     
     public void saveWorldToXml(World world) {
