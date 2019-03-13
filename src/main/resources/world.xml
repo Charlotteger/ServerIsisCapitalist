@@ -141,8 +141,7 @@ and open the template in the editor.
                 </pallier> 
             </palliers>
         </product>
-    </products>
-    <product>
+        <product>
             <id>4</id>
             <name>tranchoir</name>
             <logo>tranchoir.jpg</logo>
@@ -265,6 +264,8 @@ and open the template in the editor.
                 </pallier> 
             </palliers>
         </product>
+    </products>
+    
     <allunlocks>
         <pallier>
             <name>Petit remontant</name>
