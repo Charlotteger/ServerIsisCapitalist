@@ -35,4 +35,14 @@ public class Webservice {
             return Response.ok(services.readWorldFromXml()).build();
         }
     
+    /* 
+        @GET // partie avec user
+        @Path("world")
+        @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+        public Response getXML(@Context HttpServletRequest request){
+            String username = request.getHeader("X-user");
+            return Response.ok(services.readWorldFromXml(username)).build();//faut modifier cette ligne
+        }
+    */
+    
 }
