@@ -16,44 +16,44 @@ and open the template in the editor.
     <totalangels>0</totalangels>
     <activeangels>0</activeangels>
     <angelbonus>0</angelbonus>
-    <lastupdate>0</lastupdate>
+    <lastupdate></lastupdate>
     <products>
         <product>
             <id>1</id>
             <name>fer</name>
             <logo>fer.png</logo>
-            <cout>4</cout>
-            <croissance>1.07</croissance>
-            <revenu>1</revenu>
+            <cout>10</cout>
+            <croissance>1.01</croissance>
+            <revenu>15</revenu>
             <vitesse>500</vitesse>
             <quantite>0</quantite>
             <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
-                    <name>Petite trouvaille</name>
-                    <logo>fer.png</logo>
+                    <name>Petit remontant</name>
+                    <logo>images/</logo>
                     <seuil>20</seuil>
                     <idcible>1</idcible>
-                    <ratio>2</ratio>
+                    <ratio>1.5</ratio>
                     <typeratio>VITESSE</typeratio>
                     <unlocked>false</unlocked>
                 </pallier>
                 <pallier>
-                    <name>Belle trouvaille</name>
-                    <logo>fer.png</logo>
-                    <seuil>50</seuil>
+                    <name>Nouveau filon</name>
+                    <logo>images/</logo>
+                    <seuil>40</seuil>
                     <idcible>1</idcible>
-                    <ratio>1.5</ratio>
+                    <ratio>1.2</ratio>
                     <typeratio>GAIN</typeratio>
                     <unlocked>false</unlocked>
                 </pallier>
                 <pallier>
-                    <name>Nouveau filon</name>
-                    <logo>fer.png</logo>
-                    <seuil>100</seuil>
+                    <name>Une bonne chope</name>
+                    <logo>images/</logo>
+                    <seuil>80</seuil>
                     <idcible>1</idcible>
-                    <ratio>2</ratio>
+                    <ratio>1.2</ratio>
                     <typeratio>VITESSE</typeratio>
                     <unlocked>false</unlocked>
                 </pallier>
@@ -63,38 +63,38 @@ and open the template in the editor.
             <id>2</id>
             <name>fourchette</name>
             <logo>fourchette.png</logo>
-            <cout>60</cout>
-            <croissance>1.15</croissance>
-            <revenu>60</revenu>
-            <vitesse>3000</vitesse>
+            <cout>15</cout>
+            <croissance>1.07</croissance>
+            <revenu>25</revenu>
+            <vitesse>700</vitesse>
             <quantite>0</quantite>
             <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
-                    <name>Nouveau marché de la fourchette</name>
-                    <logo>fourchette.png</logo>
+                    <name>Petit remontant</name>
+                    <logo>images/</logo>
                     <seuil>20</seuil>
-                    <idcible>2</idcible>
-                    <ratio>2</ratio>
+                    <idcible>1</idcible>
+                    <ratio>1.5</ratio>
                     <typeratio>VITESSE</typeratio>
                     <unlocked>false</unlocked>
                 </pallier>
                 <pallier>
-                    <name>Grand prix de la plus belle fourchette</name>
-                    <logo>fourchette.png</logo>
-                    <seuil>50</seuil>
-                    <idcible>2</idcible>
-                    <ratio>1.5</ratio>
+                    <name>Nouveau filon</name>
+                    <logo>images/</logo>
+                    <seuil>40</seuil>
+                    <idcible>1</idcible>
+                    <ratio>1.2</ratio>
                     <typeratio>GAIN</typeratio>
                     <unlocked>false</unlocked>
                 </pallier>
                 <pallier>
-                    <name>Fabrication de fourches à viande</name>
-                    <logo>fourchette.png</logo>
-                    <seuil>100</seuil>
-                    <idcible>2</idcible>
-                    <ratio>2</ratio>
+                    <name>Une bonne chope</name>
+                    <logo>images/</logo>
+                    <seuil>80</seuil>
+                    <idcible>1</idcible>
+                    <ratio>1.2</ratio>
                     <typeratio>VITESSE</typeratio>
                     <unlocked>false</unlocked>
                 </pallier> 
@@ -113,11 +113,11 @@ and open the template in the editor.
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
-                    <name>Un bois plus facile à tailler</name>
-                    <logo>couteau.png</logo>
+                    <name>Petit remontant</name>
+                    <logo>images/</logo>
                     <seuil>20</seuil>
-                    <idcible>3</idcible>
-                    <ratio>2</ratio>
+                    <idcible>1</idcible>
+                    <ratio>1.5</ratio>
                     <typeratio>VITESSE</typeratio>
                     <unlocked>false</unlocked>
                 </pallier>
@@ -154,8 +154,8 @@ and open the template in the editor.
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
-                    <name>Viande tendre</name>
-                    <logo>tranchoir.jpg</logo>
+                    <name>Petit remontant</name>
+                    <logo>images/</logo>
                     <seuil>20</seuil>
                     <idcible>4</idcible>
                     <ratio>2</ratio>
@@ -272,7 +272,7 @@ and open the template in the editor.
             <logo>petit_remontant.jpg</logo>
             <seuil>50</seuil>
             <idcible>-1</idcible>
-            <ratio>3</ratio>
+            <ratio>1.5</ratio>
             <typeratio>VITESSE</typeratio>
             <unlocked>false</unlocked>
         </pallier>
@@ -281,7 +281,7 @@ and open the template in the editor.
             <logo>une_bonne_chope.jpeg</logo>
             <seuil>100</seuil>
             <idcible>-1</idcible>
-            <ratio>3</ratio>
+            <ratio>1.5</ratio>
             <typeratio>VITESSE</typeratio>
             <unlocked>false</unlocked>
         </pallier>
@@ -312,7 +312,7 @@ and open the template in the editor.
         <pallier>
             <idcible>1</idcible>
             <logo>manager1.jpg</logo>
-            <name>manager1</name>
+            <name>manager 1</name>
             <ratio>2</ratio>
             <seuil>1000</seuil>
             <typeratio>VITESSE</typeratio>
@@ -321,7 +321,7 @@ and open the template in the editor.
         <pallier>
             <idcible>2</idcible>
             <logo>manager2.jpeg</logo>
-            <name>manager2</name>
+            <name>manager 2</name>
             <ratio>2</ratio>
             <seuil>15000</seuil>
             <typeratio>VITESSE</typeratio>
@@ -330,7 +330,7 @@ and open the template in the editor.
         <pallier>
             <idcible>3</idcible>
             <logo>manager3.jpg</logo>
-            <name>manager3</name>
+            <name>manager 3</name>
             <ratio>2</ratio>
             <seuil>80000</seuil>
             <typeratio>VITESSE</typeratio>
@@ -339,7 +339,7 @@ and open the template in the editor.
         <pallier>
             <idcible>4</idcible>
             <logo>manager4.jpg</logo>
-            <name>manager4</name>
+            <name>manager 4</name>
             <ratio>2</ratio>
             <seuil>400000</seuil>
             <typeratio>VITESSE</typeratio>
@@ -348,7 +348,7 @@ and open the template in the editor.
         <pallier>
             <idcible>5</idcible>
             <logo>manager5.jpg</logo>
-            <name>manager5</name>
+            <name>manager 5</name>
             <ratio>2</ratio>
             <seuil>960000</seuil>
             <typeratio>VITESSE</typeratio>
@@ -357,7 +357,7 @@ and open the template in the editor.
         <pallier>
             <idcible>6</idcible>
             <logo>manager6.png</logo>
-            <name>Zeus</name>
+            <name>manager 6</name>
             <ratio>2</ratio>
             <seuil>8000000</seuil>
             <typeratio>VITESSE</typeratio>
