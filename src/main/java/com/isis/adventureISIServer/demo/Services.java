@@ -22,6 +22,8 @@ import javax.xml.bind.Unmarshaller;
  *
  * @author MrsFrozen
  */
+
+//todo : implémenter le score
 public class Services {
         
     public World readWorldFromXml(String username) throws JAXBException {
@@ -128,8 +130,32 @@ public class Services {
     
     public World getWorld(String username) throws JAXBException {
         World world = readWorldFromXml(username);
+        newScore(world);//le score dependant de last update on maj le score avant de reinint last update
+        world.setLastupdate(System.currentTimeMillis());//reinit de last update 
         saveWorldToXml(world, username);
-        return world;//score
+        return world;
     }
+    
+    public void newScore(World world) {
+        long timelapse = System.currentTimeMillis() - world.getLastupdate();
+        long time;
+        for (ProductType produit : world.getProducts().getProduct()) {
+            if ((produit.isManagerUnlocked()) && (produit.getQuantite() > 0)) {//sans manager
+                time  = (timelapse - produit.getVitesse() + produit.getTimeleft()) / produit.getVitesse();
+                world.setScore(world.getMoney() + (produit.getRevenu() * (1 + world.getActiveangels() * world.getAngelbonus())) * time);
+                //timeleft0
+                if (produit.getTimeleft() < 0 || produit.getTimeleft() >= produit.getVitesse()) {
+                    produit.setTimeleft(0);
+                }
+            } else {//si pas de manager
+                if ((produit.getTimeleft() >= 0) && (produit.getTimeleft() <= timelapse)) {
+                    produit.setTimeleft(0);
+                } else if (produit.getTimeleft() > 0) {
+                    produit.setTimeleft(0);
+                }
+            }
+        }
+    }    
+    
     
 }
