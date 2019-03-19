@@ -57,6 +57,7 @@ public class Webservice {
         public void product (@Context HttpServletRequest request, String content) throws JAXBException { 
             String username = request.getHeader("X-user");
             ProductType product = new Gson().fromJson(content, ProductType.class);
+            services.updateProduct(username, product);
         }
 
         @PUT
@@ -65,6 +66,16 @@ public class Webservice {
         public void manager (@Context HttpServletRequest request, String content) throws JAXBException { 
             String username = request.getHeader("X-user");
             PallierType pallier = new Gson().fromJson(content, PallierType.class);
+            services.updateManager(username, pallier);
+        }
+        
+        @PUT
+        @Path("upgrade")
+        @Consumes(MediaType.APPLICATION_JSON)
+        public void upgrade (@Context HttpServletRequest request, String content) throws JAXBException { 
+            String username = request.getHeader("X-user");
+            PallierType upgrade = new Gson().fromJson(content, PallierType.class);
+            //update upgrade pas implémenter
         }
     
     

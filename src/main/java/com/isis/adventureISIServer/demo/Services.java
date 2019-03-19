@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import static java.lang.Math.pow;
 import java.util.List;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -67,12 +68,12 @@ public class Services {
         // sinon c’est qu’il s’agit d’un lancement de production.
         int qtchange = newproduct.getQuantite() - product.getQuantite();
         if (qtchange > 0) {
-            world.setMoney(world.getMoney()-(product.getCout()*((1-Math.pow(product.getCroissance(),qtchange))/(1-product.getCroissance())))); //grosse formule
+            world.setMoney(world.getMoney()-(product.getCout()*((1-pow(product.getCroissance(),qtchange))/(1-product.getCroissance())))); //suites geos
             product.setQuantite(product.getQuantite() + qtchange);
         // soustraire de l'argent du joueur le cout de la quantité
         // achetée et mettre à jour la quantité de product
         } else {
-            product.setTimeleft(newproduct.getVitesse());//timeleft se cale sur la vitesse
+            product.setTimeleft(newproduct.getVitesse());
         // initialiser product.timeleft à product.vitesse
         // pour lancer la production
         }
@@ -128,6 +129,7 @@ public class Services {
         return null;// si manager non trouvé renvoie null
     }
     
+    // le score est maj dans getWorld
     public World getWorld(String username) throws JAXBException {
         World world = readWorldFromXml(username);
         newScore(world);//le score dependant de last update on maj le score avant de reinint last update
