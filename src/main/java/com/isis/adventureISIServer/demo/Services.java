@@ -142,7 +142,7 @@ public class Services {
         long timelapse = System.currentTimeMillis() - world.getLastupdate();
         long time;
         for (ProductType produit : world.getProducts().getProduct()) {
-            if ((produit.isManagerUnlocked()) && (produit.getQuantite() > 0)) {//sans manager
+            if ((produit.isManagerUnlocked()) && (produit.getQuantite() > 0)) {//avec manager
                 time  = (timelapse - produit.getVitesse() + produit.getTimeleft()) / produit.getVitesse();
                 world.setScore(world.getMoney() + (produit.getRevenu() * (1 + world.getActiveangels() * world.getAngelbonus())) * time);
                 //timeleft0

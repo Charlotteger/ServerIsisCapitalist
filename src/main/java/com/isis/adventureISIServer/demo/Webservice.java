@@ -54,23 +54,22 @@ public class Webservice {
         @PUT
         @Path("product")
         @Consumes(MediaType.APPLICATION_JSON)
-        public void product (@Context HttpServletRequest request, String content) throws JAXBException { 
+        public void product (@Context HttpServletRequest request, ProductType product) throws JAXBException { 
             String username = request.getHeader("X-user");
-            ProductType product = new Gson().fromJson(content, ProductType.class);
             services.updateProduct(username, product);
         }
 
         @PUT
         @Path("manager")
         @Consumes(MediaType.APPLICATION_JSON)
-        public void manager (@Context HttpServletRequest request, String content) throws JAXBException { 
+        public void manager (@Context HttpServletRequest request, PallierType pallier) throws JAXBException { 
             String username = request.getHeader("X-user");
-            PallierType pallier = new Gson().fromJson(content, PallierType.class);
             services.updateManager(username, pallier);
+            //PallierType pallier = new Gson().fromJson(content, PallierType.class);
         }
         
         @PUT
-        @Path("upgrade")
+        @Path("upgrade")//pas implémenté
         @Consumes(MediaType.APPLICATION_JSON)
         public void upgrade (@Context HttpServletRequest request, String content) throws JAXBException { 
             String username = request.getHeader("X-user");
