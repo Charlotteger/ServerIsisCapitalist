@@ -11,7 +11,7 @@ and open the template in the editor.
     xsi:noNamespaceSchemaLocation='src/main/resources/jaxb/world/worldSchema.xsd'>
     <name>Dwarf Capitalist</name>
     <logo>logo.png</logo>
-    <money>4</money>
+    <money>10</money>
     <score>0</score>
     <totalangels>0</totalangels>
     <activeangels>0</activeangels>
@@ -338,7 +338,7 @@ and open the template in the editor.
         </pallier>
         <pallier>
             <idcible>4</idcible>
-            <logo>manager4.jpg</logo>
+            <logo>manager4.jpeg</logo>
             <name>manager 4</name>
             <ratio>2</ratio>
             <seuil>400000</seuil>

@@ -18,6 +18,7 @@ import javax.ws.rs.ext.Provider;
  */
 @Provider
 public class CORSResponseFilter implements ContainerResponseFilter {
+    @Override
     public void filter(ContainerRequestContext requestContext, ContainerResponseContext responseContext) throws IOException{
         responseContext.getHeaders().add("Access-Control-Allow-Origin", "*");
         responseContext.getHeaders().add("Access-Control-Allow-Methods", "GET, POST, DELETE,PUT, OPTIONS");

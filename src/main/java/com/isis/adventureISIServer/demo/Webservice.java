@@ -74,7 +74,7 @@ public class Webservice {
         public void upgrade (@Context HttpServletRequest request, String content) throws JAXBException { 
             String username = request.getHeader("X-user");
             PallierType upgrade = new Gson().fromJson(content, PallierType.class);
-            //update upgrade pas implémenter
+            //update upgrade pas implémenté
         }
     
     

@@ -66,10 +66,10 @@ public class Services {
         // calculer la variation de quantité. Si elle est positive c'est
         // que le joueur a acheté une certaine quantité de ce produit
         // sinon c’est qu’il s’agit d’un lancement de production.
-        int qtchange = newproduct.getQuantite() - product.getQuantite();
-        if (qtchange > 0) {
-            world.setMoney(world.getMoney()-(product.getCout()*((1-pow(product.getCroissance(),qtchange))/(1-product.getCroissance())))); //suites geos
-            product.setQuantite(product.getQuantite() + qtchange);
+        int qtchangee = newproduct.getQuantite() - product.getQuantite();
+        if (qtchangee > 0) {//suites geos:formule revue en TP
+            world.setMoney(world.getMoney()-(product.getCout()*((1-pow(product.getCroissance(),qtchangee))/(1-product.getCroissance())))); 
+            product.setQuantite(product.getQuantite() + qtchangee);
         // soustraire de l'argent du joueur le cout de la quantité
         // achetée et mettre à jour la quantité de product
         } else {
@@ -109,7 +109,7 @@ public class Services {
         return true;
     }
     
-    public ProductType findProductById(World world, int productId){
+    public ProductType findProductById(World world, int productId){//finder pour update product
         List<ProductType> products = world.getProducts().getProduct();
         for (ProductType product : products) {
             if (product.getId() == productId) {
@@ -119,10 +119,10 @@ public class Services {
         return null; // si produit non trouvé renvoie null
     }
     
-    public PallierType findManagerByName(World world, String managerName){
+    public PallierType findManagerByName(World world, String managerName){//finder pour update manager
         List<PallierType> managers = world.getManagers().getPallier();
         for (PallierType manager : managers) {
-            if (manager.getName() == managerName) {
+            if (manager.getName() == managerName ) {// manager.getName().equals(managerName) | essayer ça si la condition ne marche pas
                 return manager;
             }
         }
@@ -138,7 +138,7 @@ public class Services {
         return world;
     }
     
-    public void newScore(World world) {
+    public void newScore(World world) {//à tester
         long timelapse = System.currentTimeMillis() - world.getLastupdate();
         long time;
         for (ProductType produit : world.getProducts().getProduct()) {
