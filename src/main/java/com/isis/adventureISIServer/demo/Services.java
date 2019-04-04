@@ -31,9 +31,9 @@ public class Services {
         JAXBContext cont = JAXBContext.newInstance(World.class);
         Unmarshaller u = cont.createUnmarshaller();
         World world;
-        try {
+        try {//On regarde si le pseudo possède un monde sauvegardé
             world = (World) u.unmarshal(new File(username + "_world.xml"));
-        } catch (JAXBException e) {
+        } catch (JAXBException e) {//Si pas de monde sauvegardé, une exception est lévee. On Produit alors un nouveau world.xml que l'on sauvegarde au nom du joueur
             InputStream input = getClass().getClassLoader().getResourceAsStream("world.xml");
             world = (World) u.unmarshal(input);
             System.out.println(e.getMessage());
@@ -67,17 +67,19 @@ public class Services {
         // que le joueur a acheté une certaine quantité de ce produit
         // sinon c’est qu’il s’agit d’un lancement de production.
         int qtchangee = newproduct.getQuantite() - product.getQuantite();
-        if (qtchangee > 0) {//suites geos:formule revue en TP
+        if (qtchangee > 0) {//suites geos : formule revue en TP
             world.setMoney(world.getMoney()-(product.getCout()*((1-pow(product.getCroissance(),qtchangee))/(1-product.getCroissance())))); 
             product.setQuantite(product.getQuantite() + qtchangee);
         // soustraire de l'argent du joueur le cout de la quantité
         // achetée et mettre à jour la quantité de product
         } else {
             product.setTimeleft(newproduct.getVitesse());
+            world.setMoney(world.getMoney()+newproduct.getRevenu());//maj money du joueur
         // initialiser product.timeleft à product.vitesse
         // pour lancer la production
         }
         // sauvegarder les changements du monde
+        world.setLastupdate(System.currentTimeMillis());//on maj le lastupdate
         saveWorldToXml(world, username);
         return true;
     }
@@ -90,6 +92,7 @@ public class Services {
         // trouver dans ce monde, le manager équivalent à celui passé
         // en paramètre
         PallierType manager = findManagerByName(world, newmanager.getName());
+
         if (manager == null) {
             return false;
         }
@@ -104,12 +107,13 @@ public class Services {
         // soustraire de l'argent du joueur le cout du manager
         // sauvegarder les changements au monde
         product.setManagerUnlocked(true); 
-        world.setMoney(world.getMoney()-manager.getSeuil());
+        world.setMoney(world.getMoney()-manager.getSeuil());      
+        world.setLastupdate(System.currentTimeMillis());//on maj le lastupdate
         saveWorldToXml(world, username);
         return true;
     }
     
-    public ProductType findProductById(World world, int productId){//finder pour update product
+    public ProductType findProductById(World world, int productId){//finder pour produit avec l'id
         List<ProductType> products = world.getProducts().getProduct();
         for (ProductType product : products) {
             if (product.getId() == productId) {
@@ -122,7 +126,7 @@ public class Services {
     public PallierType findManagerByName(World world, String managerName){//finder pour update manager
         List<PallierType> managers = world.getManagers().getPallier();
         for (PallierType manager : managers) {
-            if (manager.getName() == managerName ) {// manager.getName().equals(managerName) | essayer ça si la condition ne marche pas
+            if (manager.getName().equals(managerName) ) {
                 return manager;
             }
         }
@@ -130,7 +134,7 @@ public class Services {
     }
     
     // le score est maj dans getWorld
-    public World getWorld(String username) throws JAXBException {
+    public World getWorld(String username) throws JAXBException {//methode uniquement utilisé pour chercher un monde déjà existant et maj le score et le lastupdate
         World world = readWorldFromXml(username);
         newScore(world);//le score dependant de last update on maj le score avant de reinint last update
         world.setLastupdate(System.currentTimeMillis());//reinit de last update 
@@ -138,18 +142,20 @@ public class Services {
         return world;
     }
     
-    public void newScore(World world) {//à tester
+    public void newScore(World world) {
+       
         long timelapse = System.currentTimeMillis() - world.getLastupdate();
         long time;
-        for (ProductType produit : world.getProducts().getProduct()) {
+        for (ProductType produit : world.getProducts().getProduct()) {//pour chaque produit
             if ((produit.isManagerUnlocked()) && (produit.getQuantite() > 0)) {//avec manager
                 time  = (timelapse - produit.getVitesse() + produit.getTimeleft()) / produit.getVitesse();
-                world.setScore(world.getMoney() + (produit.getRevenu() * (1 + world.getActiveangels() * world.getAngelbonus())) * time);
-                //timeleft0
+                world.setMoney(world.getMoney() + (produit.getRevenu() * (1 + world.getActiveangels() * world.getAngelbonus())) * time);//maj money
+                world.setScore(world.getMoney());//pour le moment score = money
+                produit.setTimeleft(0);
                 if (produit.getTimeleft() < 0 || produit.getTimeleft() >= produit.getVitesse()) {
                     produit.setTimeleft(0);
                 }
-            } else {//si pas de manager
+            } else {//sans managerdu
                 if ((produit.getTimeleft() >= 0) && (produit.getTimeleft() <= timelapse)) {
                     produit.setTimeleft(0);
                 } else if (produit.getTimeleft() > 0) {
