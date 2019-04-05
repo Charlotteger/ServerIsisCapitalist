@@ -11,7 +11,7 @@ and open the template in the editor.
     xsi:noNamespaceSchemaLocation='src/main/resources/jaxb/world/worldSchema.xsd'>
     <name>Dwarf Capitalist</name>
     <logo>logo.png</logo>
-    <money>10</money>
+    <money>700</money>
     <score>0</score>
     <totalangels>0</totalangels>
     <activeangels>0</activeangels>
@@ -21,7 +21,7 @@ and open the template in the editor.
         <product>
             <id>1</id>
             <name>fer</name>
-            <logo>fer.png</logo>
+            <logo>fer.jpg</logo>
             <cout>10</cout>
             <croissance>1.01</croissance>
             <revenu>15</revenu>
@@ -32,7 +32,7 @@ and open the template in the editor.
             <palliers>
                 <pallier>
                     <name>Petit remontant</name>
-                    <logo>images/</logo>
+                    <logo>fer.jpg</logo>
                     <seuil>20</seuil>
                     <idcible>1</idcible>
                     <ratio>1.5</ratio>
@@ -41,7 +41,7 @@ and open the template in the editor.
                 </pallier>
                 <pallier>
                     <name>Nouveau filon</name>
-                    <logo>images/</logo>
+                    <logo>fer.jpg</logo>
                     <seuil>40</seuil>
                     <idcible>1</idcible>
                     <ratio>1.2</ratio>
@@ -50,7 +50,7 @@ and open the template in the editor.
                 </pallier>
                 <pallier>
                     <name>Une bonne chope</name>
-                    <logo>images/</logo>
+                    <logo>fer.jpg</logo>
                     <seuil>80</seuil>
                     <idcible>1</idcible>
                     <ratio>1.2</ratio>
@@ -62,7 +62,7 @@ and open the template in the editor.
         <product>
             <id>2</id>
             <name>fourchette</name>
-            <logo>fourchette.png</logo>
+            <logo>fourchette.jpg</logo>
             <cout>15</cout>
             <croissance>1.07</croissance>
             <revenu>25</revenu>
@@ -73,7 +73,7 @@ and open the template in the editor.
             <palliers>
                 <pallier>
                     <name>Petit remontant</name>
-                    <logo>images/</logo>
+                    <logo>fourchette.jpg</logo>
                     <seuil>20</seuil>
                     <idcible>1</idcible>
                     <ratio>1.5</ratio>
@@ -82,7 +82,7 @@ and open the template in the editor.
                 </pallier>
                 <pallier>
                     <name>Nouveau filon</name>
-                    <logo>images/</logo>
+                    <logo>fourchette.jpg</logo>
                     <seuil>40</seuil>
                     <idcible>1</idcible>
                     <ratio>1.2</ratio>
@@ -91,7 +91,7 @@ and open the template in the editor.
                 </pallier>
                 <pallier>
                     <name>Une bonne chope</name>
-                    <logo>images/</logo>
+                    <logo>fourchette.jpg</logo>
                     <seuil>80</seuil>
                     <idcible>1</idcible>
                     <ratio>1.2</ratio>
@@ -103,7 +103,7 @@ and open the template in the editor.
         <product>
             <id>3</id>
             <name>couteau à fromage</name>
-            <logo>couteau.png</logo>
+            <logo>couteau.jpg</logo>
             <cout>576</cout>
             <croissance>1.14</croissance>
             <revenu>432</revenu>
@@ -114,7 +114,7 @@ and open the template in the editor.
             <palliers>
                 <pallier>
                     <name>Petit remontant</name>
-                    <logo>images/</logo>
+                    <logo>couteau.jpg</logo>
                     <seuil>20</seuil>
                     <idcible>1</idcible>
                     <ratio>1.5</ratio>
@@ -123,7 +123,7 @@ and open the template in the editor.
                 </pallier>
                 <pallier>
                     <name>Affutage</name>
-                    <logo>couteau.png</logo>
+                    <logo>couteau.jpg</logo>
                     <seuil>50</seuil>
                     <idcible>3</idcible>
                     <ratio>1.5</ratio>
@@ -132,7 +132,7 @@ and open the template in the editor.
                 </pallier>
                 <pallier>
                     <name>Nouvel acier</name>
-                    <logo>couteau.png</logo>
+                    <logo>couteau.jpg</logo>
                     <seuil>100</seuil>
                     <idcible>3</idcible>
                     <ratio>2</ratio>

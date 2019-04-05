@@ -70,6 +70,10 @@ public class Services {
         if (qtchangee > 0) {//suites geos : formule revue en TP
             world.setMoney(world.getMoney()-(product.getCout()*((1-pow(product.getCroissance(),qtchangee))/(1-product.getCroissance())))); 
             product.setQuantite(product.getQuantite() + qtchangee);
+            product.setCout(newproduct.getCout());
+            product.setRevenu(newproduct.getRevenu());
+            
+            
         // soustraire de l'argent du joueur le cout de la quantité
         // achetée et mettre à jour la quantité de product
         } else {
